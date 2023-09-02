@@ -1,0 +1,39 @@
+$smallBorderRadius: 4px;
+$mediumBorderRadius: 7px;
+
+@mixin columnFont($size, $weight: 600) {
+  font: {
+    family: 'Segoe UI', sans-serif;
+    size: $size;
+    weight: $weight;
+  }
+}
+
+%headerButton {
+  $headerButtonSize: 20px;
+  padding: 0;
+  border-radius: $smallBorderRadius;
+  box-sizing: border-box;
+  height: $headerButtonSize;
+  width: $headerButtonSize;
+  display: inline-block;
+  text-align: center;
+}
+
+// colors
+$backgroundblue: #f4f8ff;
+$backgroundGray: #d9d9d9;
+$backgroundViolet: #b233a6;
+$backgoundWhite: #ffffff;
+$borderBlue: #aab7d4;
+$borderGray: #7b8aab;
+$textlBlack: #555555;
+$textBlue: #3d8fec;
+$textGray: #616c82;
+$textGreen: #50b810;
+
+// environment
+body {
+  width: 263px;
+  margin: 50px auto 0;
+}

@@ -1,0 +1,23 @@
+@import '../../style';
+
+.column {
+  background-color: $backgoundWhite;
+  header {
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    h5 {
+      margin: 0 {
+        right: auto;
+      }
+      @include columnFont(14px);
+      line-height: 20px;
+      color: $textGreen;
+    }
+    button {
+      margin: 0 {
+        left: 3.5px;
+      }
+    }
+  }
+}

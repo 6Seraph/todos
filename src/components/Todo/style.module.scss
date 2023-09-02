@@ -1,0 +1,99 @@
+@import '../../style';
+
+.wrapper {
+  margin: 0 {
+    top: 8px;
+  }
+  padding: 10px;
+  border-radius: $mediumBorderRadius;
+  background-color: $backgroundblue;
+}
+
+.todo {
+  position: relative;
+  padding: inherit;
+  border-radius: $mediumBorderRadius;
+  box-shadow: 0px 1px 2px 0px #d0daeb, 0px 0px 2px 0px #eef4fe;
+  background-color: $backgoundWhite;
+
+  label {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    accent-color: $textBlue;
+
+    input[type='checkbox'] {
+      margin: 0 {
+        right: 8px;
+      }
+      border: 1px;
+      height: 16px;
+      width: 16px;
+      box-sizing: content-box;
+      display: inline;
+      vertical-align: middle;
+      accent-color: $textBlue;
+    }
+
+    h6 {
+      line-height: 18px;
+      @include columnFont(14px);
+      vertical-align: middle;
+      color: $textBlue;
+      display: inline;
+    }
+  }
+
+  .dates {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    @include columnFont(13px);
+    color: $textGreen;
+  }
+
+  p {
+    margin: 0 {
+      top: 4px;
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include columnFont(13px, 400);
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 8px;
+    padding: 0;
+    display: flex;
+    column-gap: 4px;
+    @include columnFont(12px);
+
+    li {
+      padding: 1px 6px 2px;
+      border-radius: $smallBorderRadius;
+      background-color: $backgroundViolet;
+      color: white;
+
+      &:last-child {
+        color: $textGray;
+        padding-right: 11px;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 0 0 H 200 V 20 H 0 V 0' fill='%23EBEEF6'/%3E%3C/svg%3E%0A"),
+          url("data:image/svg+xml,%3Csvg width='11' height='20' viewBox='0 0 11 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H2.0775C3.29264 0 4.44189 0.552359 5.20098 1.50122L10.001 7.50122C11.1697 8.96209 11.1697 11.0379 10.001 12.4988L5.20098 18.4988C4.44189 19.4476 3.29264 20 2.0775 20H0V0Z' fill='%23EBEEF6'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 11px bottom 0, right top;
+      }
+    }
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+  }
+}

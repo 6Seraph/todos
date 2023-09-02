@@ -1,0 +1,14 @@
+@import '../../style';
+
+.todosList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 80dvh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
