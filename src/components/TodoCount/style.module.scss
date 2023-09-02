@@ -1,7 +1,7 @@
 @import "../../style";
 
-.button {
-  @extend %headerButton;
+.count {
+  @extend %headerElement;
   border: 1px solid $borderGray;
   background-color: $backgoundWhite;
   @include columnFont(12px);

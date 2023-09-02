@@ -1,7 +1,7 @@
 @import '../../style';
 
 .button {
-  @extend %headerButton;
+  @extend %headerElement;
   border: 0;
   background-color: color-mix(in srgb, $backgroundGray 20%, white);
   opacity: 20;

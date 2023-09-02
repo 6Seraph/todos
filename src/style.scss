@@ -9,13 +9,13 @@ $mediumBorderRadius: 7px;
   }
 }
 
-%headerButton {
-  $headerButtonSize: 20px;
+%headerElement {
+  $headerElementSize: 20px;
   padding: 0;
   border-radius: $smallBorderRadius;
   box-sizing: border-box;
-  height: $headerButtonSize;
-  width: $headerButtonSize;
+  height: $headerElementSize;
+  width: $headerElementSize;
   display: inline-block;
   text-align: center;
 }
