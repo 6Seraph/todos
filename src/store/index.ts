@@ -1,4 +1,4 @@
-import { observable, action, runInAction } from 'mobx';
+import { observable, runInAction } from 'mobx';
 import getTodos, { ITodoResponse } from '../APIs/getTodos';
 import { faker } from '@faker-js/faker';
 
@@ -22,7 +22,7 @@ const todoStore = observable<ITodoStore>({
   page: 1,
 });
 
-const getMoreTodos = action(async function () {
+async function getMoreTodos () {
   runInAction(() => (todoStore.loading = true));
   try {
     const { data } = await getTodos(todoStore.page);
@@ -42,7 +42,7 @@ const getMoreTodos = action(async function () {
     runInAction(() => (todoStore.error = true));
   }
   runInAction(() => (todoStore.loading = false));
-});
+}
 
 export { todoStore as default, getMoreTodos };
 export type { ITodo };
